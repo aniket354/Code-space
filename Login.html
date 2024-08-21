@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+      <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
+    // Here you would typically query a database to check the credentials
+    // This is a simple demonstration using a hardcoded username and password
+    $correctUsername = 'admin';
+    $correctPassword = 'password123';
+
+    if ($username === $correctUsername && $password === $correctPassword) {
+        echo "Login successful! Welcome, $username.";
+    } else {
+        echo "Invalid username or password.";
+    }
+}
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login Form</title>
+
+  </head>
+<body>
+    <div class="login-container">
+        <form id="loginForm" method="POST" action="">
+            <h1>Login</h1>
+            <div class="form-group">
+                
+                <input type="text" placeholder="username" required>
+                <i class='bx bxs-user' ></i>
+            </div>
+            <div class="form-group">
+              <label for="password"</label>
+                <input type="password" placeholder="password" required>
+             <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="remember">
+                  <label><input type="checkbox">Remember me</input></label>
+                  <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register">
+              <p>Dont't have an account<a href="#">Register</a></p>
+            </div>
+        </form>
+      </body>
+</html>
+
+  </div>
