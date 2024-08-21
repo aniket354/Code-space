@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-      <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Here you would typically query a database to check the credentials
-    // This is a simple demonstration using a hardcoded username and password
-    $correctUsername = 'admin';
-    $correctPassword = 'password123';
-
-    if ($username === $correctUsername && $password === $correctPassword) {
-        echo "Login successful! Welcome, $username.";
-    } else {
-        echo "Invalid username or password.";
-    }
-}
-?>
+      
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
           <script src="script.js">    
           </script>
+          <?php include 
+          'mycode.php';?>
       </body>
 </html>
 
